@@ -4,9 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css"/>
     <title>Document</title>
+    <style>
+        body{
+            background-color: #202d36;
+        }
+        header{
+            background-color: #2b3743;
+        }
+        .myInput{
+            background-color: #2b3743;
+            color: white;
+            border: none;
+        }
+        .myInput::placeholder{
+            color: white;
+        }
+        .myInput:focus{
+            color: white;
+            background-color: #2b3743;
+        }
+
+    </style>
 </head>
 <body>
-    Hello world!
+    <header class="container-fluid text-white p-4">
+        <div class="row d-flex justify-content-between align-content-center">
+            <div class="col-3 fs-4 fw-bold">Where in the world?</div>
+            <div class="col-1 fs-6">Dark mode</div>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div class="row mt-5">
+            <form action="#" class="d-flex justify-content-around">
+                <div class="col-4"><input type="text" placeholder="Search for a country..." class="myInput form-control"></div>
+                <div class="col-3">
+                    <select name="region" id="" class="form-select myInput">
+                        <option selected>Filter by Region</option>
+                        <option value="1">Africa</option>
+                        <option value="2">America</option>
+                        <option value="3">Asia</option>
+                        <option value="4">Europe</option>
+                        <option value="5">Oceania</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src='/node_modules/bootstrap/dist/js/bootstrap.min.js'></script>
 </body>
 </html>
